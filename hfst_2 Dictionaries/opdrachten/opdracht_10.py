@@ -1,6 +1,3 @@
-# Maak gebruik van onderstaande dictionary.
-from curses import flash
-
 
 flashkaarten = {
     "hond": "dog",
@@ -10,9 +7,9 @@ flashkaarten = {
 }
 fouten = {}
 
-for flashkaart, vertaling in flashkaarten: 
-    input(f"Wat is de vertaling van {flashkaart}: ")
-    if flashkaart == vertaling:
+for flashkaart, vertaling in flashkaarten.items(): 
+    gevraagde = input(f"Wat is de vertaling van {flashkaart}: ")
+    if gevraagde == vertaling:
         print("Dit klopt!")
     else:
         fouten[flashkaart] = vertaling
