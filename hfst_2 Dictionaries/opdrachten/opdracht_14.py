@@ -28,3 +28,21 @@ laptop_config = {
     "supplier": "???",
     "supplier_2": {"id": 1, "name": "SignPost"}
 }
+
+
+laptop_config["assigned_to"]["created_at"]["date"] = "2021-11-09"
+
+
+laptop_config.pop("supplier_2")
+
+
+
+# Er staan een hoop verschillende sleutels 'id' in de geneste dictionary.
+# Doorloop de geneste dictionary en print alle waarden gekoppeld aan een sleutel 'ID'
+# 	Merk op! Gebruik een for-loop. De code moet blijven werken, ook als de dictionary wijzigt.
+# 		       Je mag er wel vanuit gaan dat sleutels 'id' zich ENKEL op het 2de niveau bevinden.
+
+for key in laptop_config.items():
+    for id in key:
+        if id == "id":
+            print(id)
